@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # settings
-KEEP_FOR=60     # seconds
-DELAY=10
+KEEP_FOR=1800     # seconds
+DELAY=300
 CYCLE=0
 
 while true; do
 
     DATE=`date +%h-%d\(%H:%M:%S\)`    
 
-    if [[ "$CYCLE" -ge 1900 ]]; then
+    if [[ "$CYCLE" -ge 2101 ]]; then
             CYCLE=0
     fi
 
@@ -33,7 +33,7 @@ while true; do
         fi    
     fi    
 
-    let "MIN = $CYCLE / 30"
+    let "MIN = $CYCLE / 60"
     printf "$DATE: received: $RECEIVED, net delay for $MIN min \n" 
 
 done
