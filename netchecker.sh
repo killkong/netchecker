@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # settings
-KEEP_FOR=1800     # seconds
+KEEP_FOR=900     # seconds
 DELAY=300
 CYCLE=0
 
@@ -9,7 +9,7 @@ while true; do
 
     DATE=`date +%h-%d\(%H:%M:%S\)`    
 
-    if [[ "$CYCLE" -ge 2101 ]]; then
+    if [[ "$CYCLE" -ge 1001 ]]; then
             CYCLE=0
     fi
 
